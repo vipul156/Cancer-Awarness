@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-dark: #1a1a2e;
+  --color-primary-light: #16213e;
+  
+  --color-accent: #ff6b6b;
+  --color-accent-secondary: #feca57;
+
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+
+  --animate-fade-up: fade-up 1s ease-out forwards;
+
+  @keyframes fade-up {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-primary-dark);
+  color: #ffffff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+}
+
+
+@utility text-highlight {
+  @apply bg-gradient-to-br from-accent to-accent-secondary bg-clip-text text-transparent inline-block;
+}
